@@ -1,0 +1,42 @@
+\def\VCDate{2018/04/07}\def\VCVersion{(Current)}
+\documentclass{ffslides}
+\ffpage{30}{\numexpr 16/9}
+\usepackage{fancyvrb}
+\usepackage{ProofPower}
+\begin{document}
+\obeyspaces
+
+\normalpage{CS124 Lab5 - main.cpp}{
+    \VerbatimInput[lastline=28]{main.cpp}
+}
+
+\normalpage{CS124 Lab5 - main.cpp}{
+    \VerbatimInput[firstline=42,lastline=64]{main.cpp}
+}
+
+\normalpage{CS124 Lab5 - loginCB.cpp}{
+    \VerbatimInput{loginCB.cpp}
+}
+
+\normalpage{CS124 Lab5 - lab.h}{
+    \VerbatimInput[lastline=16}{lab.h}
+}
+
+\normalpage{CS124 Lab5 - lab.h}{
+    \VerbatimInput[firstline=19,lastline=40]{lab.h}
+}
+
+\normalpage{Build Script}{
+Before running the build script, extract by running cmd:  \\
+{\tt docsml lab5}
+
+\begin{GFT}{Text written to file build.sh}
+\+doctex lab\\
+\+pptexenv latex lab\\
+\+dvipdf lab\\
+\end{GFT}
+\begin{GFT}{Bourne Shell}
+\+chmod +x build.sh\\
+\end{GFT}
+}
+\end{document}
