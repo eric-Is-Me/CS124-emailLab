@@ -15,14 +15,15 @@ using namespace std;
 
 const int width = 400;
 const int height = 400;
+const int maxUsers = 10;
+int currentUsers = 0;
 
 struct Message{
     string from;
+    string to;
     string subject;
     string msg;
 };
-
-const int maxUsers = 10;
 
 struct Subscriber{
     string name;
@@ -32,6 +33,8 @@ struct Subscriber{
 extern Fl_Double_Window ew;
 void loginCB(Fl_Widget*);
 void mailCB();
+treenode *find(treenode *root, const string data);
+bool newUser(treenode* &root, const string data);
 extern Fl_Input* loginInput;
 extern Fl_Double_Window* sw;
 extern Fl_Double_Window* mailWin;
