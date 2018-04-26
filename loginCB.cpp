@@ -4,13 +4,14 @@ void loginCB(Fl_Widget*){
     if(v == users[0].name){
         string msg = "Hello ";
         msg += v;
-        int choice = fl_choice(msg.c_str(), "Exit", "Go to mail", 0);
+        int choice = fl_choice(msg.c_str(), "Send", "Read", 0);
         switch(choice){
-            case 0: exit(EXIT_SUCCESS);
-            case 1: break;
+            case 0: cout << "sending..." << endl;
+                    break;
+            case 1: cout << "reading..." << endl;
         }
     }
-    //fl_alert(msg->buffer()->text());
-    mailWin->show();
+    fl_alert(msg->buffer()->text());
+    sw->show();
     ew.hide();
 }
