@@ -9,6 +9,7 @@ int main()
     Subscriber natasha;
     Subscriber joseph;
     Subscriber mark;
+    string searchItem;
     
     mark.name = "Mark";
     joseph.name = "Joseph";
@@ -24,7 +25,13 @@ int main()
     tree.insertNode(humza);
     tree.insertNode(natasha);
     
-    cout << "Done inserting nodes.\n";
+    cout << "Enter the subscriber you would like to search: ";
+    cin >> searchItem;
+    
+    if (tree.searchNode(searchItem))
+        cout << "You found " << searchItem << "!\n";
+    else
+        cout << searchItem << " isn't here...\n";
     
     return 0;
 }

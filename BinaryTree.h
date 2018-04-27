@@ -27,17 +27,11 @@ public:
     {}
     
     void insertNode(Subscriber &);
-    bool searchNode(Subscriber &);
+    bool searchNode(string);
     void remove(Subscriber &);
     
     void displayInOrder() const
     { displayInOrder(root); }
-    
-    void displayPreOrder() const
-    { displayPreOrder(root); }
-    
-    void displayPostOrder() const
-    { displayPostOrder(root); }
 };
 
 #endif

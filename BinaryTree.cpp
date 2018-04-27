@@ -1,4 +1,6 @@
 #include "BinaryTree.h"
+#include <iostream>
+using namespace std;
 
 void BinaryTree::insertNode(Subscriber &sub)
 {
@@ -21,3 +23,28 @@ void BinaryTree::insert(TreeNode *&nodePtr, TreeNode *&newNode)
         insert(nodePtr->right, newNode);
 }
 
+void BinaryTree::displayInOrder(TreeNode *nodePtr) const
+{
+    if (nodePtr)
+    {
+        displayInOrder(nodePtr->left);
+        cout << (nodePtr->value).name << endl;
+        displayInOrder(nodePtr->right);
+    }
+}
+
+bool BinaryTree::searchNode(string name)
+{
+    TreeNode *nodePtr = root;
+    
+    while (nodePtr)
+    {
+        if ((nodePtr->value).name == name)
+            return true;
+        else if (name < (nodePtr->value).name)
+            nodePtr = nodePtr->left;
+        else
+            nodePtr = nodePtr->right;
+    }
+    return false;
+}
