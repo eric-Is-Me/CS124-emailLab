@@ -48,3 +48,48 @@ bool BinaryTree::searchNode(string name)
     }
     return false;
 }
+
+void BinaryTree::remove(Subscriber &sub)
+{
+    deleteNode(sub, root);
+}
+
+void BinaryTree::deleteNode(Subscriber &sub, TreeNode *&nodePtr)
+{
+    if (sub.name < (nodePtr->value).name)
+        deleteNode(sub, nodePtr->left);
+    else if (sub.name > (nodePtr->value).name)
+        deleteNode(sub, nodePtr->right);
+    else
+        makeDeletion(nodePtr);
+}
+
+void BinaryTree::makeDeletion(TreeNode *&nodePtr)
+{
+    TreeNode *tempNodePtr;
+    
+    if (nodePtr == nullptr)
+        cout << "Cannot delete empty node.\n";
+    else if (nodePtr->right == nullptr)
+    {
+        tempNodePtr = nodePtr;
+        nodePtr = nodePtr->left;
+        delete tempNodePtr;
+    }
+    else if (nodePtr->left == nullptr)
+    {
+        tempNodePtr = nodePtr;
+        nodePtr = nodePtr->right;
+        delete tempNodePtr;
+    }
+    else
+    {
+        tempNodePtr = nodePtr->right;
+        while (tempNodePtr->left)
+            tempNodePtr = tempNodePtr->left;
+        tempNodePtr->left = nodePtr->left;
+        tempNodePtr = nodePtr;
+        nodePtr = nodePtr->right;
+        delete tempNodePtr;
+    }
+}

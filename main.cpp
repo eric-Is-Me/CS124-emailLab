@@ -25,13 +25,13 @@ int main()
     tree.insertNode(humza);
     tree.insertNode(natasha);
     
-    cout << "Enter the subscriber you would like to search: ";
-    cin >> searchItem;
+    tree.displayInOrder();
     
-    if (tree.searchNode(searchItem))
-        cout << "You found " << searchItem << "!\n";
-    else
-        cout << searchItem << " isn't here...\n";
+    cout << "Deleting Joseph...\n";
+    tree.remove(eric);
+    tree.remove(mark);
+    
+    tree.displayInOrder();
     
     return 0;
 }

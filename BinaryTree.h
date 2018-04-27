@@ -16,8 +16,10 @@ private:
     
     void insert(TreeNode *&, TreeNode *&);
     void displayInOrder(TreeNode *) const;
-    void displayPreOrder(TreeNode *) const;
-    void displayPostOrder(TreeNode *) const;
+    
+    void deleteNode(Subscriber &, TreeNode *&);
+    void makeDeletion(TreeNode *&);
+    
     
 public:
     BinaryTree()
