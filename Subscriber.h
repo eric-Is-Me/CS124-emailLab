@@ -6,6 +6,7 @@ using namespace std;
 struct Subscriber
 {
     string name;
+    string password;
 };
 
 #endif /* Subscriber_h */
