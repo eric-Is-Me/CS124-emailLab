@@ -16,10 +16,10 @@ private:
     
     void insert(TreeNode *&, TreeNode *&);
     void displayInOrder(TreeNode *) const;
+    void writeTofile(TreeNode *) const;     // writes subscriber binary tree to a file subscribers.txt
     
     void deleteNode(Subscriber &, TreeNode *&);
     void makeDeletion(TreeNode *&);
-    
     
 public:
     BinaryTree()
