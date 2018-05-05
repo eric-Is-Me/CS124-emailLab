@@ -1,10 +1,18 @@
-\def\VCDate{2018/04/07}\def\VCVersion{(Current)}
+\def\VCDate{2018/04/25}\def\VCVersion{(Current)}
 \documentclass{ffslides}
 \ffpage{30}{\numexpr 16/9}
 \usepackage{fancyvrb}
 \usepackage{ProofPower}
 \begin{document}
 \obeyspaces
+
+\normalpage{CS124 Lab5 - lab.h}{
+    \VerbatimInput[lastline=16]{lab.h}
+}
+
+\normalpage{CS124 Lab5 - lab.h}{
+    \VerbatimInput[firstline=19,lastline=40]{lab.h}
+}
 
 \normalpage{CS124 Lab5 - main.cpp}{
     \VerbatimInput[lastline=28]{main.cpp}
@@ -18,12 +26,30 @@
     \VerbatimInput{loginCB.cpp}
 }
 
-\normalpage{CS124 Lab5 - lab.h}{
-    \VerbatimInput[lastline=16}{lab.h}
+\normalpage{CS124 Lab5 - Documentation - find.cpp}{
+    \ctext{.1}{.1}{.5}{
+        \begin{itemize}
+            \item Uses the built in cpp compare function.
+            \item This uses the ASCII table to compare the first character in the string
+            \item I might make a function for the compares later.
+        \end{itemize}
+    }
+}
+\normalpage{CS124 Lab5 - find.cpp}{
+    \VerbatimInput{find.cpp}
 }
 
-\normalpage{CS124 Lab5 - lab.h}{
-    \VerbatimInput[firstline=19,lastline=40]{lab.h}
+\normalpage{CS124 Lab5 - Documentation - newUser.cpp}{
+    \ctext{.1}{.1}{.5}{
+        \begin{itemize}
+            \item Uses built in cpp compare function like find.cpp
+            \item We use the compare statements to find a suitable location for the new node
+        \end{itemize}
+    }
+}
+
+\normalpage{CS124 Lab5 - newUser.cpp}{
+    \VerbatimInput{newUser.cpp}
 }
 
 \normalpage{Build Script}{
