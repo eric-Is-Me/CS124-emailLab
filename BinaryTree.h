@@ -35,5 +35,4 @@ public:
     void displayInOrder() const
     { displayInOrder(root); }
 };
-
 #endif

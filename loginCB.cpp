@@ -15,5 +15,4 @@ void loginCB(Fl_Widget*){
     else{
         fl_message("Sorry, You entered the wrong credentials. Try again.");
     }
-    //fl_alert(msg->buffer()->text());
 }

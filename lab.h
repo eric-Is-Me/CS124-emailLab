@@ -28,14 +28,6 @@ struct Message{
     string msg;
 };
 
-/*  Excluding for now because we have a Subscriber header file
- *  But shouldn't we include the messages in the subscriber struct?
- *struct Subscriber{
- *   string name;
- *   list<Message> mailbox;
- *};
- */
-
 extern Fl_Double_Window ew;
 void loginCB(Fl_Widget*);
 void writeMsgCB(Fl_Widget*);

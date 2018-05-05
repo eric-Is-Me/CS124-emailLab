@@ -7,57 +7,274 @@
 \obeyspaces
 
 \normalpage{CS124 Lab5 - lab.h}{
-    \VerbatimInput[lastline=16]{lab.h}
+    \VerbatimInput[lastline=18]{lab.h}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item One third of this header file is literally just include files for the stuff we need from the FLTK library.
+    \end{itemize}
 }
 
 \normalpage{CS124 Lab5 - lab.h}{
-    \VerbatimInput[firstline=19,lastline=40]{lab.h}
+    \VerbatimInput[firstline=20,lastline=29]{lab.h}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item I just arbitrarily set the window size to be 400x400
+        \item The message struct contains three strings that an email would usually have.
+        \item This is for incoming messages.
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - lab.h}{
+    \VerbatimInput[firstline=31]{lab.h}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item Lower third of the header file consists of our function prototypes and external variables
+        \item We need to have external declarations to declare in other files like our callbacks
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - BinaryTree.h}{
+    \VerbatimInput[lastline=21]{BinaryTree.h}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item Class based implementation of the binary search tree
+        \item The struct for TreeNode calls the Subscriber struct within it for modular reasons
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - BinaryTree.h}{
+    \VerbatimInput[firstline=24]{BinaryTree.h}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item Public member functions include the insertNode, searchNode, remove, and displayInOrder functions
+        \item All the functions in here are only applicable to tree objects
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - Subscriber.h}{
+    \VerbatimInput{Subscriber.h}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item Self-explanatory struct for subscribers; contains string for name and password.
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - searchNode.cpp}{
+    \VerbatimInput{searchNode.cpp}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item Iterative implementation of the search function
+        \item If the value of the node is equal to the person we're looking for then we have found the node
+        \item If the value is less than the parameter we entered; we go to the left child of the node
+        \item Else if the value is greater than the parameter we entered we go to the right child
+        \item We keep doing this in the while look until we return true.
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - remove.cpp}{
+    \VerbatimInput[lastline=22]{remove.cpp}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item Calls the deleteNode function to remove the root node
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - makeDeletion.cpp}{
+    \VerbatimInput[lastline=22]{makeDeletion.cpp}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item TODO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - makeDeletion.cpp}{
+    \VerbatimInput[firstline=23]{makeDeletion.cpp}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item TODO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - insert.cpp}{
+    \VerbatimInput{insert.cpp}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item If there are no nodes in the tree then we create the first node i.e. the root.
+        \item If the current node we are pointing to has a greater value than the one we are trying to insert then we insert to the left of it.
+        \item If the current node we are pointing to has a lesser value than the one we are tryign to insert then we insert to the right of it.
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - insertNode.cpp}{
+    \VerbatimInput{insertNode.cpp}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item Allocates a new node to insert
+        \item Assigns the data in subscriber to the value of the tree node
+        \item Sets the left and right child to null and then calls the insert function
+        \item If the insert is successful, we let the user know by producing a message popup
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - displayInOrder.cpp}{
+    \VerbatimInput{displayInOrder.cpp}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item Recursive implementation of the display in order function
+        \item We are displaying with priority towards the front of the alphabet(A)
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - deleteNode.cpp}{
+    \VerbatimInput{deleteNode.cpp}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item Takes two parameters: subscriber address and node pointer
+        \item Does comparisons of nodes until correct node is found then calls makeDeletion function
+    \end{itemize}
 }
 
 \normalpage{CS124 Lab5 - main.cpp}{
-    \VerbatimInput[lastline=28]{main.cpp}
+    \VerbatimInput[lastline=20]{main.cpp}
+}
+\ctext{.5}{.2}{.4}{
+    \begin{itemize}
+        \item The build command is written on the top of the file for reference
+        \item Fltk requires the use of many global declarations of each widget you want to create
+        \item We hard coded the first account for now due to time constraint and convenience
+    \end{itemize}
 }
 
 \normalpage{CS124 Lab5 - main.cpp}{
-    \VerbatimInput[firstline=42,lastline=64]{main.cpp}
+    \VerbatimInput[firstline=22,lastline=34]{main.cpp}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item The login buton uses  Fl Button  which is a nice and simple button that will call a callback function when clicked
+        \item The name and password fields use  Fl Input  and  Fl Secret Input  respectively for text input
+        \item The  Secret Input  function makes it so that your text shows up as censored asterisks when typing in your password
+        \item We are able to check for correct name and password in the loginCB callback. We will go into that later.
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - main.cpp}{
+    \VerbatimInput[firstline=36]{main.cpp}
+}
+\ctext{.5}{.5}{.4}{
+    \begin{itemize}
+        \item I made the mail window in the main file because...programmer discretion...
+        \item This is the window that is supposed to show recieved/incoming mail
+        \item There are three buttons currently that can take you to the compose mail window, add subscriber window, and remove subscriber window
+    \end{itemize}
 }
 
 \normalpage{CS124 Lab5 - loginCB.cpp}{
     \VerbatimInput{loginCB.cpp}
 }
-
-\normalpage{CS124 Lab5 - Documentation - find.cpp}{
-    \ctext{.1}{.1}{.5}{
-        \begin{itemize}
-            \item Uses the built in cpp compare function.
-            \item This uses the ASCII table to compare the first character in the string
-            \item I might make a function for the compares later.
-        \end{itemize}
-    }
-}
-\normalpage{CS124 Lab5 - find.cpp}{
-    \VerbatimInput{find.cpp}
+\ctext{.55}{.1}{.4}{
+    \begin{itemize}
+        \item The login callback stores the value of the input fields for name and password and stores them in their own strings
+        \item We then make a check if the entered values match with the user's account credentials
+        \item If the information entered is wrong then we show a message that alerts the user that the information entered was wrong and allows the user to try again
+        \item If the info entered is correct then the user is greeted by the system via a message popup and asked if they want to exit or go to their inbox
+        \item If they opt to go to their inbox then we will hide the initial login screen and show the mail window
+        \item Pressing the exit button will exit the program
+    \end{itemize}
 }
 
-\normalpage{CS124 Lab5 - Documentation - newUser.cpp}{
-    \ctext{.1}{.1}{.5}{
-        \begin{itemize}
-            \item Uses built in cpp compare function like find.cpp
-            \item We use the compare statements to find a suitable location for the new node
-        \end{itemize}
-    }
+\normalpage{CS124 Lab5 - writeMsgCB.cpp}{
+    \VerbatimInput[lastline=18]{writeMsgCB.cpp}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item The writeMsgCB is the callback for when you click on the "Compose" button and will create a new window which allows for the user to type into the To, Subject, and Message fields
+        \item To and Subject uses  Fl Input  to retrieve text and we can use the same method of  $->value()$  to get the input and save to a file with ofstream and ifstream
+    \end{itemize}
 }
 
-\normalpage{CS124 Lab5 - newUser.cpp}{
-    \VerbatimInput{newUser.cpp}
+\normalpage{CS124 Lab5 - writeMsgCB.cpp}{
+    \VerbatimInput[firstline=20]{writeMsgCB.cpp}
 }
+\ctext{.57}{.2}{.4}{
+    \begin{itemize}
+        \item The Message field uses  Fl Text Editor  because it supports multiple lines and has a function for autowrapping text
+        \item Important note: when using  Text Editor  you must have a text buffer or else you will not be able to input text into the field
+        \item The cancel button calls the cancelMsgCB which we will get to later
+        \item At the end, we show the compose message window after all our GUI elements are defined and the actual window has been defined
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - addSubCB.cpp}{
+    \VerbatimInput{addSubCB.cpp}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item addSubCB is called when the 'Add Sub' button is clicked and draws up a small window 
+        \item This window contains the fields for name and password input using Fl Input
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - cancelCB.cpp}{
+    \VerbatimInput{cancelCB.cpp}
+}
+\ctext{.5}{.28}{.4}{
+    \begin{itemize}
+        \item When the cancel button on the 'Add Sub' window is clicked; we alert and ask the user if they are sure
+        \item We give them a choice between confirming and declining their action by using fl choice
+        \item fl choice returns an integer depending on what the user pressed and we can use that to determine what to do in the switch block
+        \item If they choose to decline canceling the sub creation then we just break out and we return back to the 'Add Sub' window
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - createCB.cpp}{
+    \VerbatimInput{createCB.cpp}
+}
+\ctext{.5}{.1}{.4}{
+    \begin{itemize}
+        \item We make a Subscriber and BinaryTree object here named sub and tree respectively to pass into the createSub function
+        \item However, I worry if I'm actually creating a new binary tree eachtime we want to create a new subscriber
+        \item I store the values of the name and password into strings and pass it into createSub
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - createSub.cpp}{
+    \VerbatimInput{createSub.cpp}
+}
+\ctext{.5}{.25}{.4}{
+    \begin{itemize}
+        \item The createSub function takes 4 paramenters: name, password, subscriber obj, and tree
+        \item This function essentially is just setting all the parameters to the correct places
+    \end{itemize}
+}
+
+\normalpage{CS124 Lab5 - cancelMsgCB.cpp}{
+    \VerbatimInput{cancelMsgCB.cpp}
+}
+\ctext{.53}{.1}{.4}{
+    \begin{itemize}
+        \item When the cancel button on the 'Compose' window is clicked; we alert and ask the user if they are sure
+        \item This process is extremely similar to the cancelCB function for the subscribers screens. We could probably make this code reusable.
+    \end{itemize}
+}
+
 
 \normalpage{Build Script}{
-Before running the build script, extract by running cmd:  \\
-{\tt docsml lab5}
 
 \begin{GFT}{Text written to file build.sh}
-\+doctex lab\\
 \+pptexenv latex lab\\
 \+dvipdf lab\\
 \end{GFT}

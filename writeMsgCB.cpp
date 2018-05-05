@@ -19,7 +19,7 @@ void writeMsgCB(Fl_Widget*){
     
     message = new Fl_Text_Editor(width * 0.03, msgY + 90, width * .94, 235, "");
     textbuf = new Fl_Text_Buffer();
-    message->wrap_mode(1,10);
+    message->wrap_mode(1,35);
     message->buffer(textbuf);
     //USE char* text() to output our text to a string.
     //message->align(ALIGN_TOP);        We might need fltk 2.0 for this
