@@ -1,5 +1,7 @@
 //g++ *.cpp -std=c++11 -I ~/fltk-1.3.3 `fltk-config --cxxflags --ldflags --use-cairo` -o main
 #include "lab.h"
+#include "BinaryTree.h"
+#include "Subscriber.h"
 Fl_Double_Window ew(width,height);
 Fl_Double_Window* sw;
 Fl_Double_Window* mailWin;
@@ -38,30 +40,10 @@ int main(){
     writeMsg->callback(writeMsgCB);
     
     addSub = new Fl_Button(width * 0.55, height * 0.03, 70, 30, "Add Sub");
-    //addSub->calllback(addSubCB);
+    addSub->callback(addSubCB);
     
     deleteSub = new Fl_Button(width * 0.74, height * 0.03, 90, 30, "Delete Sub");
     //deleteSub->callback(deleteSubCB);
-    
-    /*
-    // Style table
-    // Colors currently do not work for w/e reason but it is not important to lab
-    Fl_Text_Display::Style_Table_Entry stable[] = {
-         // FONT COLOR      FONT FACE   FONT SIZE
-         // --------------- ----------- --------------
-         {  FL_RED,         FL_COURIER, 18 }, // A - Red
-         {  FL_DARK_YELLOW, FL_COURIER, 18 }, // B - Yellow
-         {  FL_DARK_GREEN,  FL_COURIER, 18 }, // C - Green
-         {  FL_BLUE,        FL_COURIER, 18 }, // D - Blue
-    };
-    Fl_Text_Display *disp = new Fl_Text_Display(10,20,380,25, "Display");
-    Fl_Text_Buffer *txtbuf = new Fl_Text_Buffer();      //text buffer
-    Fl_Text_Buffer *stylebuf = new Fl_Text_Buffer();    //style buffer
-    disp->buffer(txtbuf);
-    txtbuf->text("Lorem ipsum");
-    stylebuf->text("DDDDDDDDDDD");
-    mailWin->hide();
-    */
     
     ew.show();
     Fl::run();
